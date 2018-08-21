@@ -1,0 +1,190 @@
+@import "variables";
+
+.poster {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+
+    @media(min-width: 768px) {
+        width: 173px;
+    }
+
+    &--progressing {
+        transform: scale(0.95);
+    }
+
+    .poster__images {
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .real {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 100%;
+        }
+
+        .updating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+
+        div {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            transform:rotate(-45deg);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+            line-height: 24px;
+            transition: all 0.2s;
+        }
+
+        &.new-tag div {
+            background: gold;
+        }
+        &.premiere-tag div {
+            background: #08A508;
+        }
+    }
+
+    .poster__actions {
+        height: 35px;
+        background: #1D1D1D;
+        color: #FFF;
+
+        button {
+            display: inline-block;
+            position: relative;
+            width: 28px;
+            height: 34px;
+            padding: 6px;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 16px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover, &.active {
+                color: #FFF !important;
+            }
+
+            &.history {
+                font-size: 14px;
+                color: $history;
+
+                &:hover, &.active {
+                    background: $history;
+                }
+            }
+            &.collect {
+                color: $collect;
+
+                &:hover, &.active {
+                    background: $collect;
+                }
+            }
+            &.list {
+                color: $list;
+
+                &:hover, &.active {
+                    background: $list;
+                }
+            }
+            &.watch-now {
+                color: $watch-now;
+
+                &:hover, &.active {
+                    background: $watch-now-hover;
+                }
+            }
+        }
+
+        .dropdown {
+            float: right;
+            color: #666;
+
+            .dropdown__menu {
+                min-width: 120px;
+            }
+        }
+    }
+
+    .poster__titles {
+        margin-top: 10px;
+        font-weight: 200;
+        text-align: center;
+        p {
+            overflow: hidden;
+            //text-overflow: ellipsis;
+            white-space: normal;
+        }
+        a {
+            color: inherit;
+        }
+
+        .titles__episode {
+            position: relative;
+        }
+        .titles__number {
+            display: inline-block;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        .titles__show {
+            margin-top: 7px;
+            font-size: 18px;
+        }
+
+        /*.titles--single {
+            margin-top: 1.9em;
+        }*/
+
+        .unseen {
+            display: inline-block;
+            position: absolute;
+            top: -1px;
+            z-index: 100;
+            right: -30px;
+            padding: 3px;
+            vertical-align: text-top;
+            background: #000;
+            font-size: 13px;
+            color: #AAA;
+            transition: transform 0.1s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .unseen {
+            transform: translateX(-30px);
+        }
+    }
+}
+.whiteColor{
+    color: white;
+}

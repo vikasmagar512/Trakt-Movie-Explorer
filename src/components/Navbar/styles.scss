@@ -1,0 +1,241 @@
+@import "variables";
+
+$navbar-height: 50px;
+
+.navbar {
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $navbar-height;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.5s;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        margin: 6px 0 0 -32.5px;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+
+        img {
+            height: 65px;
+        }
+
+        .bottom-wrapper {
+            position: absolute;
+            z-index: -1;
+            bottom: 3px;
+            overflow: hidden;
+            width: 65px;
+            height: 22px;
+
+            .bottom {
+                position: absolute;
+                bottom: 1px;
+                left: 1px;
+                background: rgba(0, 0, 0, 0.6);
+                width: 63px;
+                height: 63px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .search {
+        &.active {
+            button {
+                background: $primary;
+                color: #FFF !important;
+            }
+            .search__input {
+                pointer-events: auto;
+                opacity: 1;
+                transition-duration: 0.5s;
+
+                input {
+                    transform: scale3d(1, 1, 1);
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            z-index: 2000;
+            float: left;
+        }
+
+        .search__input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+            input {
+                width: 75%;
+                padding: 10px;
+                border: none;
+                border-bottom: 5px solid;
+                outline: none;
+                background: transparent;
+                font-size: 10vw;
+                color: $primary;
+                transform: scale3d(0, 1, 1);
+                transform-origin: 0% 50%;
+                transition: transform 0.3s;
+            }
+        }
+    }
+
+    .lights-toggle {
+        transition: opacity 0.3s;
+    }
+
+    // A fix for the lights toggle being above the search area when open
+    .search.active + .lights-toggle {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    .user {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .user .btn {
+        display: flex;
+        align-items: center;
+        height: $navbar-height;
+        padding: 0;
+        background: none;
+        font-size: 13px;
+        color: #FFF;
+
+        .avatar {
+            display: inline-block;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    }
+    .user .dropdown {
+        color: #333;
+
+        .dropdown__menu {
+            right: -20px;
+        }
+    }
+
+    .nav {
+        position: absolute;
+        padding-left: 0;
+        list-style: none;
+
+        &.nav--left {
+            display: none;
+        }
+        &.nav--right {
+            display: none
+        }
+
+        &.nav--first {
+            left: 0;
+        }
+        &.nav--last {
+            right: 0;
+
+            .user span {
+                display: none;
+            }
+        }
+
+        > li {
+            position: relative;
+            float: left;
+
+            > a, > button {
+                display: block;
+                padding: 15px 20px;
+                font-size: 13px;
+                font-weight: 200;
+                line-height: 20px;
+                text-decoration: none;
+                color: #FFF;
+                transition: opacity 0.5s ease-in-out;
+
+                &:hover, &:focus, &.active {
+                    color: $primary;
+                }
+                &.active {
+                    font-weight: bold;
+                }
+            }
+            > button {
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+
+        @media(min-width: 480px) {
+            &.nav--last {
+                margin-right: 20px;
+
+                .user span {
+                    display: block;
+                }
+            }
+        }
+
+        @media(min-width: 768px) {
+            &.nav--left, &.nav--right {
+                display: block;
+            }
+            &.nav--left {
+                right: 50%;
+                margin-right: 40px;
+            }
+            &.nav--right {
+                left: 50%;
+                margin-left: 40px;
+            }
+            &.nav--first {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.cinematic-lighting .navbar {
+    .nav li a, .nav li button {
+        opacity: 0.5;
+        // color: rgba(#FFF, 0.5);
+
+        &:hover, &:focus {
+            // color: #FFF;
+            opacity: 1;
+        }
+    }
+
+    .logo, .user {
+        opacity: 0.3;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

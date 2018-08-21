@@ -1,0 +1,14 @@
+// Colors
+$primary: #ED1C24;
+$history: #8E44AD;
+$collect: #16A085;
+$list: #2B678F;
+$watch-now: #AAA;
+$watch-now-hover: #555;
+
+// Material Datepicker
+$datetimepicker-primary: $primary;
+$datetimepicker-lowlight: darken(desaturate($primary, 15%), 10%);
+
+// Fonts
+$bt-font-path: '../../public/fonts';

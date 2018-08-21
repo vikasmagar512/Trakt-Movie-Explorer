@@ -1,0 +1,116 @@
+@import "variables";
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &--default {
+        background: #EEE;
+
+        &:hover, &:focus {
+            background: #DADADA;
+        }
+    }
+
+    &--primary {
+        background: $primary;
+        color: #FFF;
+
+        &.btn--ghost {
+            border-color: $primary;
+            color: $primary;
+
+            &:hover, &:focus {
+                color: #FFF;
+            }
+        }
+
+        &:hover, &:focus {
+            background: darken(desaturate($primary, 6%), 3%);
+        }
+    }
+
+    &--history {
+        background: $history;
+        color: #FFF;
+
+        &.btn--ghost {
+            border-color: $history;
+            color: $history;
+
+            &:hover, &:focus {
+                color: #FFF;
+            }
+        }
+
+        &:hover, &:focus {
+            background: darken(desaturate($history, 6%), 3%);
+        }
+    }
+
+    &--collect {
+        background: $collect;
+        color: #FFF;
+
+        &.btn--ghost {
+            border-color: $collect;
+            color: $collect;
+
+            &:hover, &:focus {
+                color: #FFF;
+            }
+        }
+
+        &:hover, &:focus {
+            background: darken(desaturate($collect, 6%), 3%);
+        }
+    }
+
+    &--list {
+        background: $list;
+        color: #FFF;
+
+        &.btn--ghost {
+            border-color: $list;
+            color: $list;
+
+            &:hover, &:focus {
+                color: #FFF;
+            }
+        }
+
+        &:hover, &:focus {
+            background: darken(desaturate($list, 6%), 3%);
+        }
+    }
+
+    &--ghost {
+        background: transparent;
+        border: 1px solid #EEE;
+    }
+
+    &--clear {
+        background: none;
+    }
+
+    &--small {
+        padding: 4px 8px;
+    }
+
+    &--large {
+        padding: 10px 18px;
+        font-size: 1.1em;
+    }
+
+    &--disabled, &--disabled:hover, &--disabled:focus {
+        background: #F7F7F7;
+        color: rgba(0, 0, 0, 0.25);
+        cursor: not-allowed;
+    }
+}
