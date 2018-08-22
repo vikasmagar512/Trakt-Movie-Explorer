@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "Vikas Magar <vikasmagar512@gmail.com>",
-  "homepage": "https://github.com/vikasmagar512/Trakt-Movie-Explorer",
+  "homepage": "https://vikasmagar512.github.io/Trakt-Movie-Explorer",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
