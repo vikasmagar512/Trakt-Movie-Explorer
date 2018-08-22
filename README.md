@@ -1,14 +1,16 @@
 <p align="center"><img src="http://i.imgur.com/kXtNdma.png" /></p>
-<h1 align="center">Dekt</h1>
+<h1 align="center">Trakt Movie Explorer</h1>
 
-Trakt.tv client in the style of TVShowTime.
-
-- View your shows from Trakt in a grid of posters in order of last watched
-- View upcoming shows with countdowns
-- A clearer calendar view
-- View your watchlisted shows
-- Live watching information
+- View Trending, Popular movies 
+- Search for movies
+- Browse through movie's cast
+- See the movies a perticular actor has worked in
 
 ![Trakt API](http://i.imgur.com/BAodUPi.png)
+
+Technicalities
+
+- React-redux App 
+- No Server involved
 
 Uses the Trakt API but is not endorsed or affiliated by Trakt.tv.
