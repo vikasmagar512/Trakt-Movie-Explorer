@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
     "build": "webpack --config webpack/webpack.prod.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public/build"
   },
   "dependencies": {
     "babel-core": "^6.22.1",
