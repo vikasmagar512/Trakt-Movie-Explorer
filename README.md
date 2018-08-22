@@ -6,9 +6,7 @@
 - Browse through movie's cast
 - See the movies a perticular actor has worked in
 
-![Trakt API](http://i.imgur.com/BAodUPi.png)
-
-Technicalities
+Technical Details
 
 - React-redux App 
 - No Server involved
