@@ -14,6 +14,13 @@ Technical Details
 
 
 
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/signIn.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/homeScreen.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/popularMovies.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/search.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/searchResults.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/movie.png "Actor")
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/movie2.png "Actor")
 ![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/actor.png "Actor")
 
 Uses the Trakt API but is not endorsed or affiliated by Trakt.tv.
