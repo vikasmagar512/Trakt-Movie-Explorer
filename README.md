@@ -12,6 +12,8 @@ Technical Details
 - No Server involved
 - Third Party Authentication
 
-https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/actor.png
+
+
+![Actor](https://github.com/vikasmagar512/Trakt-Movie-Explorer/blob/master/screenshots/actor.png "Actor")
 
 Uses the Trakt API but is not endorsed or affiliated by Trakt.tv.
