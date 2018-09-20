@@ -11,4 +11,5 @@ Technical Details
 - React-redux App 
 - No Server involved
 - Third Party Authentication
+
 Uses the Trakt API but is not endorsed or affiliated by Trakt.tv.
